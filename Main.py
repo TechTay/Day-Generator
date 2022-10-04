@@ -1,4 +1,6 @@
 import random
+from unittest import result
+from xmlrpc.client import Boolean
 
 
 
@@ -57,6 +59,11 @@ print(f'Entertainment: {result_of_entertainment} ')
 entertainment_generator()
 
 def All_items_generator():
+    con_boolean = True
+    while con_boolean:
+        user_input = input(f'Are you satisfied with your trip? Y or N' '\n')
+    if user_input == 'Y':
+        All_items_generator()
     All_items = random.choice(day_trip_generator, entertainment_generator,transportation_generator, food_places_generator)
     return All_items
 
@@ -74,7 +81,6 @@ def All_items_generator():
 
 # if x == "N '\n' ":
 #     print()
-#     pass
 # else:
         
 #     print(f'Here is your final trip!{All_items_generator}')
