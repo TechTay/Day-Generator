@@ -54,20 +54,18 @@ result_of_entertainment = entertainment_generator()
 print(f'Entertainment: {result_of_entertainment} ' '\n')
 
 
-def All_items_generator():
+def All_items_generator(result_of_location, result_of_food, result_of_transportation, result_of_entertainment):
     con_boolean = True
     while con_boolean:
         user_input = input(f'Are you satisfied with your trip? Y or N' '\n')
         if user_input == 'Y':
-            print('Here is your final trip! ', ' \n' )
-            print(f'Entertainment: {result_of_entertainment} ')
+            print('Here is your final trip! ' ' \n' )
             print(f'Destination: {result_of_location} ')
             print(f'Restuarant: {result_of_food} ')
             print(f'Transportation: {result_of_transportation} ')
-
+            print(f'Entertainment: {result_of_entertainment} ')
             con_boolean = False
         
-            
         else:
             result_of_no = input(f'What do you not like about your trip? The Destination, Restuarant, Entertainment, or Transportation?' '\n')
             if   result_of_no == 'Destination':
@@ -79,12 +77,11 @@ def All_items_generator():
             elif result_of_no == "Transportation":
                     result_of_no = transportation_generator()
                     
-                    
-        
-All_items_generator()
 
+All_items_generator(result_of_location, result_of_food, result_of_transportation, result_of_entertainment)
+print('\n')
 print('Safe Travels!')
 
-
+print('\n')
 
 
